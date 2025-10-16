@@ -2,9 +2,34 @@
 using namespace std;
 
 int main() {
-    int sum =0;
-    for (int i = 1; i <= 50; i++){
-        if((i % 7) == 0) cout << i <<" ";
+    for (int i = 1; i <= 6; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
     }
-    return 0;
+    
+    int i;
+    int j;
+    i = 1;
+    while (i <= 9) {
+        cout << i;
+        j = 1;
+        while (j <= 9) {
+            cout << i << "*" << j << "=" << i * j << "\t";
+            j += 1;
+        }
+        cout << endl;
+        i += 1;
+    }
+    return 0; 
 }
+    
+
+
+
+ 
+
+        
