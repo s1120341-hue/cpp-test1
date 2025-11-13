@@ -1,40 +1,30 @@
 #include <iostream>
-using namespace std;
+double calcuateBMI(double weight_kg, double height_cm){
+    if (height_cm <= 0) return 0.0;
 
-int main() {
-    int stack[5];
-    int top = -1;
-
-    top++;
-    stack[top] = 10;
-    top++;
-    stack[top] = 20;
-    top++;
-    stack[top] = 30;
-
-    cout << "目前堆疊內容: " << endl;
-    for (int i = 0; i <= top; i++) {
-        cout << stack[i] << " ";
-    }
-    cout << endl;
-
-    if (top >= 0){
-        cout << "彈出元素: " << stack[top] << endl;
-        top--;
-    } else {
-      cout << "堆疊是空的, 不能彈出!" << endl;
-    }
-
-    cout << "彈出後堆疊內容: " << endl;
-    for (int i = 0; i <= top; i++) {
-        cout << stack[i] << " ";
-    }
-    cout << endl;
-    
-    return 0; 
+    double height_m =  height_cm / 100.0;
+    //bmi 計算
+    double bmi = weight_kg / (height_m * height_m);
 }
-    
 
+
+int main()
+{
+    double weight1, weight2, height1, height2;
+
+    weight1 = 80;
+    weight2 = 70;
+    height1 = 168;
+    height2 = 188;
+
+    std::cout << "your bmi is" << calcuateBMI(weight1, height1) << std::end1;
+    std::cout << "another bmi is" << calcuateBMI(weight2, height2) << std::end1;
+
+
+
+
+    return 0;
+}
 
 
  
