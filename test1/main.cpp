@@ -1,29 +1,17 @@
 #include <iostream>
-double calcuateBMI(double weight_kg, double height_cm){
-    if (height_cm <= 0) return 0.0;
+using namespace std;
+int　accumlate(int n);
 
-    double height_m =  height_cm / 100.0;
-    //bmi 計算
-    double bmi = weight_kg / (height_m * height_m);
-}
-
-
-int main()
-{
-    double weight1, weight2, height1, height2;
-
-    weight1 = 80;
-    weight2 = 70;
-    height1 = 168;
-    height2 = 188;
-
-    std::cout << "your bmi is" << calcuateBMI(weight1, height1) << std::end1;
-    std::cout << "another bmi is" << calcuateBMI(weight2, height2) << std::end1;
-
-
-
-
+int main() {
+    int number = 100;
+    cout << "從1加到" << number << "總合為: "\
+    << accumlate(number);
     return 0;
+}
+int accumlate(int n) {
+    if (n==1){
+        return 1;}
+    return n+accumlate(n-1);
 }
 
 
